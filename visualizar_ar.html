@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Móvel em AR</title>
+  <!-- Importa o A-Frame e AR.js -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <!-- Definir o espaço de AR com AR.js -->
+  <a-scene embedded arjs>
+    <!-- Definindo o marcador AR (hiro) -->
+    <a-marker preset="hiro">
+      <!-- Carregando o modelo GLB do Google Drive (link de download direto) -->
+      <a-entity gltf-model="url(https://drive.google.com/uc?export=download&id=1lfxdRt9ecNMV99Uip3CJnDve7tj0vL4C)" 
+                scale="0.5 0.5 0.5" 
+                position="0 0 0">
+      </a-entity>
+    </a-marker>
+    <!-- Definindo a câmera para visualização AR -->
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
